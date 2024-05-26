@@ -1,0 +1,12 @@
+#datos_Empresa{
+    width: 45%;
+    box-shadow: 5px 5px 7px 0 black;
+    -webkit-box-shadow: 5px 5px 7px gray;
+    -moz-box-shadow: 5px 5px 7px black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    background-color: #0e718f57;
+
+}   
