@@ -4,7 +4,7 @@ const InputStyled = styled.input`
     width: 90%;
     font-size: 20px;
     border-radius: 10px;
-    //Incluir Estilo css
+    text-align: center;
 `
 function Input (props){
     const handlerOnChange =(event=>{

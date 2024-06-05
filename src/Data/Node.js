@@ -10,4 +10,7 @@ export class Node {
     getData () {
         return this.#data
     }
+    getNext(){
+        return this.#next
+    }
 }

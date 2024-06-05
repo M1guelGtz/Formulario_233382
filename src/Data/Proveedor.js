@@ -3,10 +3,6 @@ export class Proveedor{
     #telefonoEmpresa
     #emailEmpresa
     #direccionEmpresa
-    #nombreContacto
-    #telefonoContacto
-    #emailContacto
-    #direccionContacto
 
     getEmpresa(){    return this.#nombreEmpresa  }
     setEmpresa(nombre){    this.#nombreEmpresa = nombre    }
@@ -19,16 +15,4 @@ export class Proveedor{
 
     getDirEmp(){    return this.#direccionEmpresa   }
     setDirEmp(direccion){   this.#direccionEmpresa = direccion  }
-
-    getContacto(){    return this.#nombreContacto  }
-    setContacto(nombre){    this.#nombreContacto = nombre    }
-
-    getTelefonoCont(){   return this.#telefonoContacto    }
-    setTelefonoCont(telefono){   this.#telefonoContacto = telefono    }
-
-    getEmailCont(){  return this.#emailContacto   }
-    setEmailCont(email){ this.#emailContacto = email  }
-
-    getDirCont(){    return this.#direccionContacto   }
-    setDirCont(direccion){   this.#direccionContacto = direccion  }
 }

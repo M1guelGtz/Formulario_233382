@@ -1,30 +1,34 @@
+import React from 'react';
 import './Section.css';
-function SectionList (props) {
-    /*const handlerClick = (event) =>{
-        if (list.isEmpty()){
-            Swal.fire({
-                title:`No hay proveedores guardados`,
-                text: "guarde en el apartado de arriba",
-                icon: "question"
-            })
-        }else{
-            let valor=0;
-            do{
-                console.log(list.getElementAt(valor).getData().getEmpresa())
-                valor++;
-            }while(valor < list.size())
-        }
-        
-    }
+function SectionList ({LinkedList}) {
+
     return (
-        <div>
-            <div id="Datos_proveedores">
-                <Button title='Ver proveedores' onclick={handlerClick}></Button>
-            </div>  
-            {props.LinkedList.map(lista=> <Text text={lista.getEmpresa()}></Text>
-            )}
+        <div id='Cards_Registro'>
+            {
+                LinkedList.getHead() ? (
+                    <Recurse nodo = {LinkedList.getHead()}></Recurse>
+                ) : (
+                    <p>--- No hay Proveedores Guardados ---</p>
+                )
+            }
         </div>
-    )*/
+    )
+}
+function Recurse({nodo}){
+    if(!nodo){
+        return null
+    }
+    return(
+        <>
+            <div id='contenedor_Datos'>
+                <span>Nombre de la empresa:{nodo.getData().getEmpresa()}</span>
+                <span>Email:{nodo.getData().getEmailEmp()} </span>
+                <span>Direccion:  {nodo.getData().getDirEmp()} </span>
+                <span>Telefono: {nodo.getData().getTelefonoEmp()} </span>
+            </div>
+            {nodo.next && <Recurse nodo={nodo.next}></Recurse>}   
+        </>
+    )
 }
 
 export default SectionList
