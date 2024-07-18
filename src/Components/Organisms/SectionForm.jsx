@@ -62,7 +62,7 @@ function Section (props) {
                 <Button title='Guardar' onclick={handlerClick}></Button>
             </div>  
                 <Title title = 'Lista de Proveedores'></Title>
-            <SectionList LinkedList={listaProv}></SectionList>
+                <SectionList LinkedList={listaProv}></SectionList>
         </>
         
     )
